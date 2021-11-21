@@ -1,0 +1,202 @@
+/** 
+* Styles for each individual algorithms page
+*/
+
+.alg__info__root {
+  padding: 10px;
+  width: 100%;
+}
+
+.back__arrow__container {
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.back__arrow__container img {
+  height: 50px;
+  width: 50px;
+  margin: 0;
+}
+
+.back__arrow__container p {
+  margin: -0.25rem 0 0 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.back__arrow__container:hover {
+  cursor: pointer;
+}
+
+.alg__info__content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alg__info__content iframe {
+  width: 90%;
+  max-width: 600px;
+  height: 320px;
+}
+
+.alg__info__content h1 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.alg__info__content p {
+  font-size: 1.2rem;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/**
+* Pseudo-code styles
+*/
+
+.alg__pseudo__content {
+  overflow: scroll;
+}
+
+.alg__pseudo__content h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.pseudo__container {
+  background-color: #dcd9dc;
+  padding: 20px;
+  border-radius: 5px;
+  min-width: 800px;
+}
+
+.pseudo__line {
+  width: 100%;
+  margin-bottom: 1px;
+}
+
+.line__number {
+  margin-right: 1rem;
+  color: #8e8e93;
+}
+
+.pseudo__line p {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.variable {
+  color: #5684ff;
+}
+
+.method {
+  color: #9a9c12;
+}
+
+.comment {
+  color: #42935b;
+}
+
+.key_word {
+  color: #d63ef4;
+}
+
+.type {
+  color: #cd0006;
+}
+
+.operator {
+  color: #8f5900;
+}
+
+/**
+* Reference styles
+*/
+.alg__references__container {
+  margin-top: 3rem;
+}
+
+.alg__references__container h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.alg__references__info {
+  font-size: 1.25rem;
+  margin: 10px 0 1rem 0;
+  width: 95%;
+  max-width: 500px;
+  color: #8e8e93;
+}
+
+.reference {
+  display: flex;
+  align-items: center;
+
+  width: 95%;
+  max-width: 900px;
+
+  margin: 1.5rem auto;
+  padding: 10px;
+
+  box-shadow: 1px 1px 12px darkgray;
+  border-radius: 5px;
+
+  transition: ease-in 0.2s;
+}
+
+.reference:hover {
+  transform: scale(1.1);
+}
+
+.reference img {
+  height: 100px;
+  width: 100px;
+  margin-right: 1rem;
+}
+
+.reference__info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.reference__info h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.reference__info p {
+  font-size: 1rem;
+  margin: 5px 0 0 0;
+
+  color: #8e8e93;
+}
+
+@media screen and (max-width: 825px) {
+  .reference {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .reference img,
+  .reference h4 {
+    margin-bottom: 1rem;
+  }
+}

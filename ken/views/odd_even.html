@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="./css/algorithm__info.css" />
+
+<div class="alg__info__root">
+  <a href="index.php?page=algorithms">
+    <div class="back__arrow__container">
+      <img src="./img/left-icon.png" />
+      <p>Back</p>
+    </div>
+  </a>
+  <div class="alg__info__content">
+    <h1>Odd Even Merge Sort</h1>
+    <iframe
+      src="https://www.youtube.com/embed/DNbd1EFQ_1o"
+      title="Odd Even Merge Sort"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <p>
+      The odd-even merge sort algorithm is one of the two well-known parallel
+      sorting algorithms developed by Dr. Batcher. It is based on a merge
+      algorithm that merges two sorted halves of a sequence to a completely
+      sorted sequence. However, the odd-even merge sort is not data dependent.
+      This makes it possible to implement the algorithm as a sorting network.
+      While the algorithm is not asymptotically optimal, Donald Knuth has
+      concluded that compared to the AKS network, “Batcher’s method is much
+      better, unless n exceeds the total memory capacity of all computers on
+      earth!”
+    </p>
+  </div>
+  <div class="alg__pseudo__content">
+    <h2>Pseudocode:</h2>
+    <div class="pseudo__container">
+      <div class="pseudo__line">
+        <p>
+          <span class="line__number">1</span>
+          <span class="key_word">for </span> <span class="variable">p</span> = 1
+          ... <span class="variable">n</span> - 1
+        </p>
+      </div>
+      <div class="pseudo__line">
+        <p>
+          <span class="line__number">2</span>
+          <span class="key_word">&nbsp; &nbsp;for </span>
+          <span class="variable">k</span> = <span class="variable">p</span>,
+          <span class="variable">p</span>/2, <span class="variable">p</span>/4,
+          <span class="variable">p</span>/8 ...
+          <span class="comment">// As long as k >= 1</span>
+        </p>
+      </div>
+      <div class="pseudo__line">
+        <p>
+          <span class="line__number">3</span>&nbsp; &nbsp; &nbsp; &nbsp;
+          <span class="key_word">for</span> <span class="varialbe">j</span> =
+          <span class="method">mod</span>(<span class="variable">k</span>,
+          <span class="variable">p</span>) ... (<span class="variable">n</span>
+          - 1 - <span class="variable">k</span>)
+          <span class="comment">// With a step size of 2k</span>
+        </p>
+      </div>
+      <div class="pseudo__line">
+        <p>
+          <span class="line__number">4</span>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          <span class="key_word">for</span> <span class="variable">i</span> = 0
+          ... <span class="method">min</span>(<span class="variable">k</span> -
+          1, <span class="variable">n</span> - <span class="variable">j</span> -
+          <span class="variable">k</span> - 1)
+          <span class="comment"> // With a step size of 1</span>
+        </p>
+      </div>
+      <div class="pseudo__line">
+        <p>
+          <span class="line__number">5</span>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          <span class="key_word">if</span>
+          <span class="method">floor</span>((<span class="variable">i</span> +
+          <span class="variable">j</span>) / (<span class="variable">p</span> *
+          2)) == <span class="method">floor</span>((<span class="variable"
+            >i</span
+          >
+          + <span class="variable">j</span> + <span class="variable">k</span>) /
+          (<span class="variable">p</span> * 2))
+        </p>
+      </div>
+      <div class="pseudo__line">
+        <p>
+          <span class="line__number">6</span>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          compare and sort elements (<span class="variable">i</span> +
+          <span class="variable">j</span>) and (<span class="variable">i</span>
+          + <span class="variable">j</span> + <span class="variable">k</span>)
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="alg__references__container">
+    <h2>References:</h2>
+    <p class="alg__references__info">
+      Below are references to the odd-even mergesort algorithm. These references
+      include resources to learn more about the algorithm as well as systems
+      that utilize the algorithm.
+    </p>
+    <a
+      class="reference"
+      href="https://proxy.library.kent.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=cat02286a&AN=kent.b5986614&site=eds-live&scope=site"
+      target="_blank"
+    >
+      <img class="reference__img" src="./img/art_of_programming.jpeg" />
+      <div class="reference__info">
+        <h3>
+          The Art of Computer Programming: Volume 3: Sorting and Searching
+        </h3>
+        <h4>Donald E. Knuth</h4>
+        <p>
+          This book addresses the performance of Batcher's odd-even mergesort
+          and explains its benefits in great detail. It was Batcher's favorite
+          explanation of his algorithm.
+        </p>
+      </div>
+    </a>
+  </div>
+</div>
